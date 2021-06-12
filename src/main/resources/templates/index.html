@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<meta charset="utf-8">
+
+
+<head th:replace="layout/layout :: head"></head>
+
+<body id="bootstrap-overrides">
+	<header th:replace="layout/layout :: header"></header>
+
+	<section class="zoom">
+		<div class="adjust-title" > <!-- sec:authorize="isAnonymous()" -->
+			<h1 style="margin-right: 880px;">Bienvenido! </h1>
+			<h2>
+				<span style="color: white">Únete a la gran experiencia de aprendizaje</span>
+			</h2>
+		</div>
+
+		<div class="adjust-title" > <!-- sec:authorize="isAuthenticated()" -->
+			<h1 style="margin-right: 720px;">Exígete, Innova</h1>
+			<h2>
+				<!--  <span sec:authentication="name">Username</span> -->
+			</h2>
+		</div>
+
+	</section>
+
+	<section class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm">
+					<a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1623484814&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26RpsCsrfState%3d851cae1f-a9c3-2f70-05c0-c93b1c659083&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015">
+						<img src="images/principal/correo.png" class="myicons">
+					</a>
+					<a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1623484814&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26RpsCsrfState%3d851cae1f-a9c3-2f70-05c0-c93b1c659083&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015">
+						<p text-align="center" class="my_text">Correo</p>
+					</a>
+				</div>
+				<div class="col-sm">
+					<a href="https://contactoweb.upc.edu.pe/"><img src="images/principal/contacto-web.png" class="myicons"></a>
+					<a href="https://contactoweb.upc.edu.pe/">
+					<p text-align="center" class="my_text">Contacto Web</p>
+				</div>
+				<div class="col-sm">
+					<a href="/matricula">
+						<img src="images/principal/matricula.png" class="myicons">
+					</a>
+					<a href="/matricula">
+						<p text-align="center" class="my_text">Matrícula</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="hero-image">
+			<div class="hero-text">
+				<h1>Inicia tu carrera profesional, ¡YA!</h1>
+				<a href="https://www.upc.edu.pe/admision/?utm_source=Organico&utm_medium=flotante-admision"><button type="button">Más información</button></a>
+			</div>
+		</div>
+	</section>
+
+
+	<footer th:replace="layout/layout :: footer"></footer>
+
+</body>
+
+</html>
